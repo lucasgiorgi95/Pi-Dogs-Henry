@@ -1,0 +1,23 @@
+.btnPaginado{
+    display: inline-flex;
+    width: 25px;
+    height: 25px;
+    background: #141414e7;
+    color: white;
+    font-size: 15px;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    margin: 1px;
+    border: none;
+    cursor: pointer;
+    transition: .3s ease all;
+    position: relative;
+    border-radius: 5px;
+     overflow: hidden; 
+}
+
+.btnPaginado:hover{
+    transform: translateY(-5px)
+    
+}

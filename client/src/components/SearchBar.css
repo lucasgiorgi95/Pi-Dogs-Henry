@@ -1,0 +1,44 @@
+.btnSearch{
+    display: inline-flex;
+    width: 100px;
+    height: 40px;
+    background: #141414e7;
+    color: white;
+    font-size: 15px;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    transition: .3s ease all;
+    position: relative;
+    border-radius: 5px;
+    overflow: hidden; 
+}
+.btnSearch span{
+    position: relative;
+    z-index: 2;
+    transition: .3s ease all;
+}
+
+.btnSearch::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: lightslategray;
+    position: absolute;
+    z-index: 1;
+    top: -80px;
+    left: 0;
+    transition: .3s ease-in-out all;
+}
+.btnSearch:hover::after{
+    top: 0;
+}
+
+.inputBar{
+    width: 100px;
+    height: 40px;
+    border-radius: 5px;
+    font-size: 15px
+}
