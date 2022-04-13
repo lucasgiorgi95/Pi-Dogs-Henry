@@ -13,11 +13,14 @@ export default function DogCreate () {
 
     const [temperamentosElegidos, setTemperamentosElegidos] = useState([]);
     const [input, setInput] = useState({
-        name:"",
-        weight: "",
-        height: "",
-        life_span: "",
-        temperaments: []
+          name: "",
+          height_max: "",
+          height_min: "",
+          weight_max: "",
+          weight_min: "",
+          temperament: [],
+          life_span: "",
+          image: "",
     })
     
 
@@ -32,7 +35,7 @@ export default function DogCreate () {
         setTemperamentosElegidos((temps) => [...temps, e.target.options[index].text]);
         setInput({
           ...input,
-          temperaments: [...input.temperaments, e.target.value],
+          temperaments: [...input.temperament, e.target.value],
         });
       };
 
@@ -50,7 +53,7 @@ export default function DogCreate () {
           life_span: "",
           image: "",
         });
-        history("/home");
+        history.push("/home");
       }
 
       useEffect(() => {

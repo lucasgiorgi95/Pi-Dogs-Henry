@@ -3,7 +3,7 @@
   }
   .containerDetail{
     width: 350px;
-    height: 560px;
+    height: auto;
     border-radius: 10px;
     border: 1px solid;
     border-color: black;
@@ -28,7 +28,7 @@
   
   .imgContainer {
     width: 300px;
-    height: 250;
+    height: auto;
     border-radius: 10px;
     border: 1px solid black;
     overflow: hidden;

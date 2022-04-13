@@ -33,7 +33,7 @@ return (
               <div className='imgContainer'>
                   <img src={myDogs[0].image} alt="Perrito" width="300px" height="250px"/>
               </div>
-              <div className='textContainer'>
+              <div >
                   <h1>Raza:</h1>
                   <p>{myDogs[0].name}</p>
                   <h3>Espectativa de vida: {myDogs[0].life_span}</h3>
@@ -48,24 +48,24 @@ return (
                   <h3>Temperament:</h3>
                   <h4>{myDogs[0].temperament}</h4>
                  
+                </div>
+            </div>: 
+              <div >
+              <h1>Raza:</h1>
+              <p>{myDogs?.name}</p>
+              <h3>Espectativa de vida: {myDogs?.life_span}</h3>
+              <p>Peso maximo:</p>
+              <p>{myDogs?.weight_max} Kg</p>
+              <h2>Peso minimo:</h2>
+              <p> {myDogs?.weight_min} kg</p>
+              <h3>Atura maximo: </h3>
+              <p>{myDogs?.height_max}.cm</p>
+              <h3>Atura minima: </h3>
+              <p>{myDogs?.height_min}.cm</p>
+              <h3>Temperament:</h3>
+              <h4>{myDogs?.temperament}</h4>
               </div>
-          </div>: 
-          <div>
-          <h1>Raza:</h1>
-          <p>{myDogs.name}</p>
-          <h3>Espectativa de vida: {myDogs.life_span}</h3>
-          <p>Peso maximo:</p>
-          <p>{myDogs.weight_max} Kg</p>
-          <h2>Peso minimo:</h2>
-          <p> {myDogs.weight_min} kg</p>
-          <h3>Atura maximo: </h3>
-          <p>{myDogs.height_max}.cm</p>
-          <h3>Atura minima: </h3>
-          <p>{myDogs.height_min}.cm</p>
-          <h3>Temperament:</h3>
-          <h4>{myDogs.temperaments}</h4>
-          </div>
-        
+            
           } 
           
 

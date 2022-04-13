@@ -9,7 +9,7 @@ const router = Router();
 // Configurar los routers
 // Ejemplo: router.use('/auth', authRouter);
 router.get('/dogs', async (req, res)=>  {
-    const {name} = req.query;
+        const {name} = req.query;
         const everyDog = await getAllInfo()
         try {   
          if (name) { 
@@ -34,7 +34,7 @@ router.get('/dogs/:id', async (req, res)=>{
 
 router.get('/temperament', async (req,res)=>{
     const apiTemperament = await getAllInfo();
-    const newTemperaments = await apiTemperament.map((e)=> e.temperament)//.filter((e)=>e)
+    const newTemperaments = await apiTemperament.map((e)=> e.temperament).filter((e)=>e)
     //console.log(newTemperaments)
     newTemp = newTemperaments.join().split(',')
     console.log(newTemp)
@@ -59,7 +59,7 @@ router.post('/dog', async (req, res) => {
         where: {name: temperament} 
     })
     createDog.addTemperament(dbTemperament)
-    res.send('Perro creado')
+    res.send(createDog)
 
     
 } catch (error) {
