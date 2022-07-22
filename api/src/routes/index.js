@@ -28,7 +28,7 @@ router.get('/dogs/:id', async (req, res)=>{
          const respuesta = await getApiInfoById(id)
             if(respuesta) {
                 res.status(200).send(respuesta);
-            } else {res.status(404).send("No hay perri, perri")}
+            } else {res.status(404).send("No hay perro")}
     } catch (error) {res.status(500).send({msg: error})}
 }) 
 

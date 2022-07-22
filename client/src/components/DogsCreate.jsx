@@ -6,6 +6,8 @@ import './DogCreate.css'
 
 
 export default function DogCreate () {
+
+
     const dispatch = useDispatch()
     
     const temperaments = useSelector((state) => state.temperaments)
@@ -23,13 +25,21 @@ export default function DogCreate () {
           image: "",
     })
     
-
+    const [error, setError] = useState()
     const handleInputChange = function (e) {
         e.preventDefault();
-        setInput({ ...input, [e.target.name]: e.target.value,});
-      };
-
-
+        setInput((prevState) => {
+            //creo mi nuevo estado
+            const newState = {
+              ...prevState,
+              [e.target.name]: e.target.value,
+            };
+        setError(validation(newState))
+        return newState
+      });
+      }
+      
+console.log(error)
       const handleSelect = (e) => {
         let index = e.target.selectedIndex;
         setTemperamentosElegidos((temps) => [...temps, e.target.options[index].text]);
@@ -59,7 +69,13 @@ export default function DogCreate () {
       useEffect(() => {
         dispatch(getTemperament())
     }, [dispatch])
-     
+     function validation(state){
+        let error = {}
+        if(!input.name){
+            error.name = 'El nombre es requerido'
+        }
+        return error
+     }
     return (
         <>
             <div className='containerCreate'>

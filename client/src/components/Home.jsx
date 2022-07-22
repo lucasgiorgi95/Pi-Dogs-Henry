@@ -82,19 +82,6 @@ function Home() {
     <>  
       
       <div className='containerHome'>  
-      <h1 href="#" class="title">
-        <span id="span1"></span>
-        <span id="span2"></span>
-        <span id="span3"></span>
-        <span id="span4"></span>
-        Inicio
-    </h1>
-
-
-
-
-
-
       <Link to= {'/dog'}> <button className='btnHome'><span>Crear Perro</span></button></Link>
       <button className='btnHome' onClick={e=>{handleClick(e)}}><span>Recargar</span></button>
         <select className='btnHome' onChange={(e)=>handleFilter(e)}>
@@ -106,22 +93,19 @@ function Home() {
           {totalDogs?.map((t) => (<option value={t.name} key={t.id}>{t.name}</option>))}
         </select>
         <select className='btnHome' onChange={e=>handleSort(e)}>
+        <option value="">Alfabetico</option>
           <option value="asc">AZ</option>
           <option value="desc">ZA</option>
         </select>
         <select className='btnHome' onChange={e=>handleSortWeigth(e)}>
+          <option value="">Peso</option>
           <option value="weight">Pesados</option>
           <option value="weight_min">Livianos</option>
-        </select>
-        <select className='btnHome' onChange={(e)=>handleFilterCreated(e)}>
-          <option value="all">Todos</option> 
-          <option value="created">Creados</option>
-          <option value="api">Existentes</option>
         </select>
         <SearchBar/> 
       </div>
       <Paginado dogsPages={dogsPages} totalDogs ={totalDogs.length} paginado={paginado}/>
-
+      <div className='containerCard'> 
         {currentDogs?.map((e) =>{return(
           <div >
           <Link  to ={`/dogs/${e.id}`} >
@@ -130,7 +114,7 @@ function Home() {
           </div>
          )})
         }
-      
+       </div>
     </>
   )
 }

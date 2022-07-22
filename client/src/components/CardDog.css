@@ -1,12 +1,13 @@
 
 .containerCard{
-  display: grid;
-  grid-template-columns: 50% 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 .card{
   width: 200px; 
-  height: autopx;
+  height: auto;
   border-radius: 8px;
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.603);
   overflow: hidden;

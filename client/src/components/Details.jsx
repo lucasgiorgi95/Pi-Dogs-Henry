@@ -20,10 +20,6 @@ export default function Detail(){
   }
   , [dispatch]);
 
-
-
-myDogs = useSelector((state) => state.detail);
-
 return (
   <div>
           <Link to='/home'> <button className='btn'><span>Volver</span></button></Link>

@@ -73,7 +73,7 @@ try {
     }) 
     return ordenarDatos;
 } catch (error) {
-    console.log(error)
+    console.log(error) 
 }
 }
 
