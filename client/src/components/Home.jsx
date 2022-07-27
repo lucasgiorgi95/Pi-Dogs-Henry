@@ -82,25 +82,25 @@ function Home() {
     <>  
       
       <div className='containerHome'>  
-      <Link to= {'/dog'}> <button className='btnHome'><span>Crear Perro</span></button></Link>
-      <button className='btnHome' onClick={e=>{handleClick(e)}}><span>Recargar</span></button>
+      <Link to= {'/dog'}> <button className='btnHome'><span>Create dog</span></button></Link>
+      <button className='btnHome' onClick={e=>{handleClick(e)}}><span>Reload</span></button>
         <select className='btnHome' onChange={(e)=>handleFilter(e)}>
           <option value="temperament">Temperament</option>
           {temps?.map((t) => (<option value={t.name} key={t.id}>{t.name}</option>))}
         </select>
         <select className='btnHome' onChange={(e)=>handleFilterRaza(e)}>
-          <option value="raza">Raza</option>
+          <option value="raza">Race</option>
           {totalDogs?.map((t) => (<option value={t.name} key={t.id}>{t.name}</option>))}
         </select>
         <select className='btnHome' onChange={e=>handleSort(e)}>
-        <option value="">Alfabetico</option>
+        <option value="">Alphabet</option>
           <option value="asc">AZ</option>
           <option value="desc">ZA</option>
         </select>
         <select className='btnHome' onChange={e=>handleSortWeigth(e)}>
-          <option value="">Peso</option>
-          <option value="weight">Pesados</option>
-          <option value="weight_min">Livianos</option>
+          <option value="">Weight</option>
+          <option value="weight">Heavy</option>
+          <option value="weight_min">Lightweight</option>
         </select>
         <SearchBar/> 
       </div>

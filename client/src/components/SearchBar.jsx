@@ -20,10 +20,10 @@ function SearchBar() {
   return (
     <>
     <div>
-    <button className='btnSearch' type='submit' onClick={(e)=>handleSubmit(e)}><span>Buscar</span></button>
         <input className='inputBar' type="text" 
-        placeholder='Buscar...' 
+        placeholder='Search...' 
         onChange={(e)=>handleInput(e)}/>
+        <button className='btnSearch' type='submit' onClick={(e)=>handleSubmit(e)}><span>Search</span></button>
     </div>
     </>
   )

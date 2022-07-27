@@ -80,7 +80,7 @@ console.log(error)
         <>
             <div className='containerCreate'>
                
-                <h1>¡Creá tu Perrito !</h1>
+                <h1>Create Your Dogs !</h1>
                 <form onSubmit={(e)=> handleSubmit(e)}>
                     <div>
                         <label>Nombre:</label>

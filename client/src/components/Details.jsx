@@ -30,19 +30,16 @@ return (
                   <img src={myDogs[0].image} alt="Perrito" width="300px" height="250px"/>
               </div>
               <div >
-                  <h1>Raza:</h1>
-                  <p>{myDogs[0].name}</p>
-                  <h3>Espectativa de vida: {myDogs[0].life_span}</h3>
-                  <p>Peso maximo:</p>
-                  <p>{myDogs[0].weight_max} Kg</p>
-                  <h2>Peso minimo:</h2>
-                  <p> {myDogs[0].weight_min} kg</p>
-                  <h3>Atura maximo: </h3>
-                  <p>{myDogs[0].height_max}.cm</p>
-                  <h3>Atura minima: </h3>
-                  <p>{myDogs[0].height_min}.cm</p>
+                  <h1>Race: {myDogs[0].name}</h1>
+                  <h3>Life span: {myDogs[0].life_span}</h3>
+                  <h3>Weigth Max: {myDogs[0].weight_max} Kg</h3>
+                  <h3>Weigth Min: {myDogs[0].weight_min} Kg</h3>
+                  <h3>Heigth Max: {myDogs[0].height_max}.cm </h3>
+                  <p></p>
+                  <h3>Heigth Min: {myDogs[0].height_min}.cm</h3>
+                  <p></p>
                   <h3>Temperament:</h3>
-                  <h4>{myDogs[0].temperament}</h4>
+                  <p>{myDogs[0].temperament}</p>
                  
                 </div>
             </div>: 

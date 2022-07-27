@@ -8,14 +8,11 @@ function CardDog({name, image, life_span, temperament,weight_max}) {
 
           <div className='card'>
             <img className='img' src={image} alt="supuestamente soy un perro"/>
-            <h3>Nombre:</h3>
-            <p> {name}</p>
-            <h3>Espectativa de vida:</h3>
-            <p>{life_span}</p>
-            <h3>Peso:</h3>
-            <p>{weight_max}kg</p>
-            <h3>Temperamento:</h3>
-            <p>{temperament}</p> 
+            <h3>Name: {name}</h3>
+            <h3>Life span: {life_span}</h3>
+            <h3>Weight: {weight_max}kg</h3>
+            <h3>Temperament:</h3>
+            {temperament}
           </div>
           
       </div>
