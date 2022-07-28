@@ -9,7 +9,7 @@ const LandingPage = () => {
        <div className='containerLandig'>
         <Link to='/home'>
               <button class="btnLanding-neon">
-              Bienvenidos
+                Welcome
               </button>
         </Link>
       </div> 

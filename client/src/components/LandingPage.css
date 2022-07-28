@@ -1,3 +1,16 @@
+body{
+    margin: auto;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url('https://img.freepik.com/vector-gratis/fondo-patron-animal-transparente-ilustracion-vector-impresion-pata-linda_53876-156206.jpg?w=740&t=st=1658971695~exp=1658972295~hmac=3a716c40a504691b1f08b8dfade337c8cd493b3630a1afb3db152b70a716be81')   ;
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace; 
+}
+
 
 .btnLanding-neon{
     position: relative;
@@ -6,12 +19,13 @@
     color: black;
     letter-spacing: 4px;
     text-decoration: none;
-    font-size: 64px;
+    font-size: 24px;
     overflow: hidden;
     transition: 0.2s;
     font-weight: 900;
     margin-top: 200px;
     border-radius: 5px;
+    background: burlywood;
 }
 .btnLanding-neon:hover{
     background: #141414e7;

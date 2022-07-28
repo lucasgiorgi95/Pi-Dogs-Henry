@@ -2,8 +2,8 @@
     display: inline-flex;
     width: 100px;
     height: 40px;
-    background: #141414e7;
-    color: white;
+    background: burlywood;
+    color:black;
     font-size: 15px;
     align-items: center;
     justify-content: center;
@@ -14,6 +14,7 @@
     position: relative;
     border-radius: 5px;
     overflow: hidden; 
+    border: solid 1px black;
 }
 .btnSearch span{
     position: relative;
@@ -25,7 +26,7 @@
     content: '';
     width: 100%;
     height: 100%;
-    background: lightslategray;
+    background: chocolate;
     position: absolute;
     z-index: 1;
     top: -80px;

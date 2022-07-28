@@ -82,29 +82,36 @@ function Home() {
     <>  
       
       <div className='containerHome'>  
-      <Link to= {'/dog'}> <button className='btnHome'><span>Create dog</span></button></Link>
-      <button className='btnHome' onClick={e=>{handleClick(e)}}><span>Reload</span></button>
-        <select className='btnHome' onChange={(e)=>handleFilter(e)}>
-          <option value="temperament">Temperament</option>
-          {temps?.map((t) => (<option value={t.name} key={t.id}>{t.name}</option>))}
-        </select>
-        <select className='btnHome' onChange={(e)=>handleFilterRaza(e)}>
-          <option value="raza">Race</option>
-          {totalDogs?.map((t) => (<option value={t.name} key={t.id}>{t.name}</option>))}
-        </select>
-        <select className='btnHome' onChange={e=>handleSort(e)}>
-        <option value="">Alphabet</option>
-          <option value="asc">AZ</option>
-          <option value="desc">ZA</option>
-        </select>
-        <select className='btnHome' onChange={e=>handleSortWeigth(e)}>
-          <option value="">Weight</option>
-          <option value="weight">Heavy</option>
-          <option value="weight_min">Lightweight</option>
-        </select>
-        <SearchBar/> 
+        <div className='nav' >
+        <Link to= {'/dog'}> <button className='btnHome'><span>Create dog</span></button></Link>
+        <button className='btnHome' onClick={e=>{handleClick(e)}}><span>Reload</span></button>
+          <select className='btnHome' onChange={(e)=>handleFilter(e)}>
+            <option value="temperament">Temperament</option>
+            {temps?.map((t) => (<option value={t.name} key={t.id}>{t.name}</option>))}
+          </select>
+          <select className='btnHome' onChange={(e)=>handleFilterRaza(e)}>
+            <option value="raza">Race</option>
+            {totalDogs?.map((t) => (<option value={t.name} key={t.id}>{t.name}</option>))}
+          </select>
+          <select className='btnHome' onChange={e=>handleSort(e)}>
+            <option value="">Alphabet</option>
+            <option value="asc">AZ</option>
+            <option value="desc">ZA</option>
+          </select>
+          <select className='btnHome' onChange={e=>handleSortWeigth(e)}>
+            <option value="">Weight</option>
+            <option value="weight">Heavy</option>
+            <option value="weight_min">Lightweight</option>
+          </select> 
+          <div className='nav-search'>
+          <SearchBar/>
+          </div>
+        </div>
+        
       </div>
-      <Paginado dogsPages={dogsPages} totalDogs ={totalDogs.length} paginado={paginado}/>
+      <div className='paginado' >
+        <Paginado dogsPages={dogsPages} totalDogs ={totalDogs.length} paginado={paginado}/>
+      </div>
       <div className='containerCard'> 
         {currentDogs?.map((e) =>{return(
           <div >
@@ -115,6 +122,9 @@ function Home() {
          )})
         }
        </div>
+       <div className='paginado' >
+        <Paginado dogsPages={dogsPages} totalDogs ={totalDogs.length} paginado={paginado}/>
+      </div>
     </>
   )
 }
