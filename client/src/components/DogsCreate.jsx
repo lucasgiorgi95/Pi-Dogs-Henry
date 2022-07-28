@@ -80,10 +80,10 @@ console.log(error)
         <>
             <div className='containerCreate'>
                
-                <h1>Create Your Dogs !</h1>
+                <h1>Create Your Dogs!</h1>
                 <form onSubmit={(e)=> handleSubmit(e)}>
                     <div>
-                        <label>Nombre:</label>
+                        <label>Name:</label>
                         <input
                         type='Text'
                         value = {input.name}
@@ -93,9 +93,9 @@ console.log(error)
                     </div>
 
                     <div className='div'>
-                        <label>Temperamento</label>
-                        <select onChange={handleSelect}>
-                            <option value="all">Temperamentos</option>
+                        <label>Temperament</label>
+                        <select className='btnHome' onChange={handleSelect}>
+                            <option value="all">Temperament</option>
                             {temperaments?.map((t) => (
                             <option key={t.id} value={t.name}> {t.name} </option>))}
                         </select>
@@ -106,7 +106,7 @@ console.log(error)
                         onChange={handleInputChange} 
                         />
                         <ul>
-                            <h3>temperamentosElegidos: </h3>
+                            <h3>Chosen temperaments: </h3>
                             <div >
                                 {temperamentosElegidos?.map((el) => (
                                     <div key={el}>
@@ -119,7 +119,7 @@ console.log(error)
                 
 
                     <div className='div'>
-                        <label>Peso maximo</label>
+                        <label>Max weight</label>
                         <input
                         type='Text'
                         value = {input.weight_max} 
@@ -128,7 +128,7 @@ console.log(error)
                         />
                     </div>
                     <div className='div'>
-                        <label>Peso minimo</label>
+                        <label>Mim weight</label>
                         <input
                         type='Text'
                         value = {input.weight_min} 
@@ -137,7 +137,7 @@ console.log(error)
                         />
                     </div>
                     <div className='div'>
-                        <label>Altura maxima</label>
+                        <label>Maximum height</label>
                         <input
                         type='Text'
                         value = {input.height_max}
@@ -146,7 +146,7 @@ console.log(error)
                         />
                     </div>
                     <div className='div'>
-                        <label>Altura minima</label>
+                        <label>Minimun height</label>
                         <input
                         type='Text'
                         value = {input.height_min}
@@ -155,7 +155,7 @@ console.log(error)
                         />
                     </div>
                     <div className='div'>
-                        <label>Expectativa de vida</label>
+                        <label>Life span</label>
                         <input
                         type='Text'
                         value = {input.life_span} 
@@ -164,9 +164,9 @@ console.log(error)
                         />
                     </div>
                     <div >
-                    <Link to= '/home'><button className='btn'><span>Volver</span></button></Link>
+                    <Link to= '/home'><button className='btn'><span>Return</span></button></Link>
                         <button className='btn' type="submit" >
-                            <span>Crear!!</span>
+                            <span>Create!!</span>
                         </button>
                     </div>
                     
